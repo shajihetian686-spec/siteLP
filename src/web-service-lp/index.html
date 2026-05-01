@@ -7,821 +7,536 @@
   <meta name="description" content="ホームページ制作・リニューアル・運用保守まで、Webに関するあらゆる課題をワンストップでサポートします。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
 
-  <!-- ========== HEADER ========== -->
-  <header class="header">
-    <div class="header__inner">
-      <a href="#" class="header__logo">
-        <span class="header__logo-icon">&#9670;</span>
-        <span class="header__logo-text">COMPANY</span>
-      </a>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li><a href="#service" class="header__nav-link">サービス内容</a></li>
-          <li><a href="#works" class="header__nav-link">制作実績</a></li>
-          <li><a href="#flow" class="header__nav-link">ご利用の流れ</a></li>
-          <li><a href="#contact" class="header__nav-link">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="header__cta-btn">無料相談はこちら</a>
-      <button class="header__hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="header__in">
+    <a href="#" class="header__logo">
+      <span class="header__logo-dot">◆</span>COMPANY
+    </a>
+    <nav class="header__nav">
+      <a href="#service" class="header__nav-link">サービス内容</a>
+      <a href="#works" class="header__nav-link">制作実績</a>
+      <a href="#flow" class="header__nav-link">ご利用の流れ</a>
+      <a href="#contact" class="header__nav-link">お問い合わせ</a>
+    </nav>
+    <a href="#contact" class="header__cta">無料相談はこちら</a>
+    <button class="header__hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ドロワーナビ -->
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer__close" id="navClose" aria-label="メニューを閉じる">✕</button>
+  <span class="nav-drawer__label">MENU</span>
+  <div class="nav-drawer__links">
+    <a href="#service">サービス内容</a>
+    <a href="#works">制作実績</a>
+    <a href="#flow">ご利用の流れ</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+  <a href="#contact" class="nav-drawer__cta">無料相談はこちら</a>
+</nav>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero__marquee-wrap">
+    <div class="hero__marquee">
+      <div class="hero__marquee-track">
+        <span class="hero__marquee-item"><span>◆</span>WEB DESIGN</span>
+        <span class="hero__marquee-item"><span>◆</span>LP PRODUCTION</span>
+        <span class="hero__marquee-item"><span>◆</span>CMS DEVELOPMENT</span>
+        <span class="hero__marquee-item"><span>◆</span>SEO STRATEGY</span>
+        <span class="hero__marquee-item"><span>◆</span>WEB RENEWAL</span>
+        <span class="hero__marquee-item"><span>◆</span>MAINTENANCE</span>
+        <span class="hero__marquee-item"><span>◆</span>RESPONSIVE DESIGN</span>
+        <span class="hero__marquee-item"><span>◆</span>CORPORATE SITE</span>
+      </div>
+      <div class="hero__marquee-track" aria-hidden="true">
+        <span class="hero__marquee-item"><span>◆</span>WEB DESIGN</span>
+        <span class="hero__marquee-item"><span>◆</span>LP PRODUCTION</span>
+        <span class="hero__marquee-item"><span>◆</span>CMS DEVELOPMENT</span>
+        <span class="hero__marquee-item"><span>◆</span>SEO STRATEGY</span>
+        <span class="hero__marquee-item"><span>◆</span>WEB RENEWAL</span>
+        <span class="hero__marquee-item"><span>◆</span>MAINTENANCE</span>
+        <span class="hero__marquee-item"><span>◆</span>RESPONSIVE DESIGN</span>
+        <span class="hero__marquee-item"><span>◆</span>CORPORATE SITE</span>
+      </div>
     </div>
-  </header>
-
-  <main>
-
-    <!-- ========== HERO / FIRST VIEW ========== -->
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="hero__content">
-          <p class="hero__label">Web制作のプロフェッショナル</p>
-          <h1 class="hero__title">
-            制作も、運用も、<br>
-            ぜんぶ任せられる<br>
-            Web制作パートナー。
-          </h1>
-          <p class="hero__description">
-            新規制作からリニューアル、運用保守まで。<br>
-            ビジネスを成長させるWeb戦略をご提供します。
-          </p>
-          <div class="hero__buttons">
-            <a href="#contact" class="btn btn--primary">無料で相談する</a>
-            <a href="#works" class="btn btn--outline">制作実績を見る</a>
-          </div>
+  </div>
+  <div class="hero__main">
+    <div class="hero__left reveal">
+      <p class="hero__tag">WEB PRODUCTION PARTNER</p>
+      <h1 class="hero__h1">
+        制作も、<br>運用も、<br><em>ぜんぶ</em><br>任せられる。
+      </h1>
+      <p class="hero__desc">
+        新規制作からリニューアル、運用保守まで。<br>
+        ビジネスを成長させるWeb戦略をご提供します。
+      </p>
+      <div class="hero__btns">
+        <a href="#contact" class="btn-fill">無料で相談する</a>
+        <a href="#works" class="btn-line">制作実績を見る</a>
+      </div>
+    </div>
+    <div class="hero__right reveal reveal-d2">
+      <div class="hero__stats">
+        <div class="hero__stat hero__stat--accent">
+          <div class="hero__stat-num">120<sup>件</sup></div>
+          <div class="hero__stat-label">制作実績</div>
         </div>
-        <div class="hero__visual">
-          <div class="hero__visual-main">
-            <picture>
-              <source media="(max-width: 767px)" srcset="assets/images/hero-main-sp.jpg">
-              <img src="assets/images/hero-main.jpg" alt="制作実績 コーポレートサイト" width="480" height="320">
-            </picture>
-          </div>
-          <div class="hero__visual-sub hero__visual-sub--1">
-            <picture>
-              <source media="(max-width: 767px)" srcset="assets/images/hero-sub1-sp.jpg">
-              <img src="assets/images/hero-sub1.jpg" alt="制作実績 LP" width="200" height="140">
-            </picture>
-          </div>
-          <div class="hero__visual-sub hero__visual-sub--2">
-            <picture>
-              <source media="(max-width: 767px)" srcset="assets/images/hero-sub2-sp.jpg">
-              <img src="assets/images/hero-sub2.jpg" alt="制作実績 ECサイト" width="180" height="126">
-            </picture>
-          </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">98<sup>%</sup></div>
+          <div class="hero__stat-label">顧客満足度</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">15<sup>年</sup></div>
+          <div class="hero__stat-label">業界経験</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">1<sup>社</sup></div>
+          <div class="hero__stat-label">窓口ひとつで完結</div>
         </div>
       </div>
-    </section>
-
-    <!-- ========== CONCERNS / よくあるお悩み ========== -->
-    <section class="concerns" id="concerns">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">CONCERNS</p>
-          <h2 class="section-header__title">「なんとかしたい」、<br class="sp-only">でも手が止まっていませんか？</h2>
-        </div>
-        <div class="concerns__grid">
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="24" height="18" rx="2"/><line x1="4" y1="12" x2="28" y2="12"/><circle cx="9" cy="9" r="1"/><circle cx="13" cy="9" r="1"/></svg>
-            </div>
-            <h3 class="concerns__card-title">ホームページが古くなった</h3>
-            <p class="concerns__card-text">デザインが時代遅れで、スマホ対応もできていない。リニューアルしたいが何から始めればいいかわからない。</p>
-          </div>
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z"/><line x1="16" y1="28" x2="16" y2="16"/><line x1="4" y1="10" x2="16" y2="16"/><line x1="28" y1="10" x2="16" y2="16"/></svg>
-            </div>
-            <h3 class="concerns__card-title">制作会社選びに迷っている</h3>
-            <p class="concerns__card-text">見積もりの相場がわからず、どの制作会社に頼めばいいか判断がつかない。</p>
-          </div>
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><polyline points="16,8 16,16 22,16"/></svg>
-            </div>
-            <h3 class="concerns__card-title">更新作業に手間がかかる</h3>
-            <p class="concerns__card-text">ちょっとした修正でも毎回制作会社に依頼が必要で、時間もコストもかかっている。</p>
-          </div>
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28 L8 12 L14 12 L14 28"/><path d="M18 28 L18 4 L24 4 L24 28"/><line x1="4" y1="28" x2="28" y2="28"/></svg>
-            </div>
-            <h3 class="concerns__card-title">集客につながらない</h3>
-            <p class="concerns__card-text">ホームページはあるが、アクセスが少なく問い合わせもほとんど来ない。</p>
-          </div>
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="20" height="24" rx="2"/><line x1="10" y1="10" x2="22" y2="10"/><line x1="10" y1="15" x2="22" y2="15"/><line x1="10" y1="20" x2="17" y2="20"/></svg>
-            </div>
-            <h3 class="concerns__card-title">コンテンツが作れない</h3>
-            <p class="concerns__card-text">何を載せればいいかわからない。文章や写真の準備も大変で手が止まっている。</p>
-          </div>
-          <div class="concerns__card">
-            <div class="concerns__card-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><path d="M12 16 L15 19 L20 13"/></svg>
-            </div>
-            <h3 class="concerns__card-title">公開後の運用が不安</h3>
-            <p class="concerns__card-text">作って終わりではなく、公開後のサポートやセキュリティ対策もしっかりしてほしい。</p>
-          </div>
-        </div>
+      <div class="hero__services-strip">
+        <ul>
+          <li>ホームページ制作・リニューアル</li>
+          <li>LP制作</li>
+          <li>CMS構築・運用サポート</li>
+          <li>SEO対策・集客支援</li>
+        </ul>
       </div>
-      <!-- CTA帯 -->
-      <div class="concerns__cta-band">
-        <div class="container">
-          <p class="concerns__cta-text">そのお悩み、私たちが解決します。まずはお気軽にご相談ください。</p>
-          <a href="#contact" class="btn btn--primary">無料相談はこちら</a>
-        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONCERNS ========== -->
+<section class="concerns" id="concerns">
+  <div class="wrap">
+    <div class="concerns__head reveal">
+      <div>
+        <p class="concerns__label">CONCERNS</p>
+        <h2 class="concerns__title">「なんとかしたい」、<br>でも手が止まって<br>いませんか？</h2>
       </div>
-    </section>
-
-    <!-- ========== REASONS / 選ばれる理由 ========== -->
-    <section class="reasons" id="reasons">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-header__label">REASONS</p>
-          <h2 class="section-header__title">選ばれる理由</h2>
-        </div>
-        <div class="reasons__grid">
-          <div class="reasons__main-card">
-            <span class="reasons__number">01</span>
-            <div class="reasons__main-card-body">
-              <h3 class="reasons__main-card-title">戦略設計から制作・運用まで<br>ワンストップで対応</h3>
-              <p class="reasons__main-card-text">設計・デザイン・開発・運用まで一貫対応。窓口がひとつだからスムーズに進みます。</p>
-            </div>
-            <div class="reasons__main-card-image">
-              <img src="assets/images/reason-main.jpg" alt="ワンストップ対応イメージ" width="360" height="220" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="reasons__sub-cards">
-            <div class="reasons__sub-card">
-              <span class="reasons__sub-number">02</span>
-              <h3 class="reasons__sub-card-title">成果につながるデザイン設計</h3>
-              <p class="reasons__sub-card-text">ユーザーの行動を促す導線設計で、問い合わせ・売上アップにつなげます。</p>
-            </div>
-            <div class="reasons__sub-card">
-              <span class="reasons__sub-number">03</span>
-              <h3 class="reasons__sub-card-title">公開後も安心のサポート体制</h3>
-              <p class="reasons__sub-card-text">更新・セキュリティ・解析まで、公開後も長くお付き合いいただけます。</p>
-            </div>
-            <div class="reasons__sub-card">
-              <span class="reasons__sub-number">04</span>
-              <h3 class="reasons__sub-card-title">明確な料金と丁寧なヒアリング</h3>
-              <p class="reasons__sub-card-text">不明瞭な追加費用なし。ご予算に合わせた最適プランをご提案します。</p>
-            </div>
-          </div>
-        </div>
+      <p class="concerns__sub">こんなお悩みを<br>抱えていませんか？<br>私たちが解決します。</p>
+    </div>
+    <div class="concerns__grid">
+      <div class="concerns__card reveal">
+        <p class="concerns__card-num">— 01</p>
+        <h3 class="concerns__card-title">ホームページが古くなった</h3>
+        <p class="concerns__card-text">デザインが時代遅れで、スマホ対応もできていない。リニューアルしたいが何から始めればいいかわからない。</p>
       </div>
-    </section>
-
-    <!-- ========== WORKS / 制作実績 ========== -->
-    <section class="works" id="works">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">WORKS</p>
-          <h2 class="section-header__title">ホームページ制作実績</h2>
-        </div>
-
-        <!-- Featured Works -->
-        <div class="works__featured">
-          <div class="works__featured-item">
-            <div class="works__featured-image">
-              <img src="assets/images/hp01.jpg" alt="村上ホーム株式会社 ホームページ制作実績" width="560" height="380" loading="lazy" decoding="async">
-            </div>
-            <div class="works__featured-info">
-              <span class="works__featured-category">コーポレートサイト</span>
-              <h3 class="works__featured-title">村上ホーム株式会社 様</h3>
-              <dl class="works__featured-meta">
-                <div class="works__featured-meta-item">
-                  <dt>業種</dt>
-                  <dd>不動産・建築</dd>
-                </div>
-                <div class="works__featured-meta-item">
-                  <dt>対応範囲</dt>
-                  <dd>SEO / デザイン / システム / CMS構築 / Mailフォーム</dd>
-                </div>
-              </dl>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>FLASH</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__featured-item works__featured-item--reverse">
-            <div class="works__featured-image">
-              <img src="assets/images/hp02.jpg" alt="有限会社坂田金時堂 ホームページ制作実績" width="560" height="380" loading="lazy" decoding="async">
-            </div>
-            <div class="works__featured-info">
-              <span class="works__featured-category">コーポレートサイト</span>
-              <h3 class="works__featured-title">有限会社坂田金時堂 様</h3>
-              <dl class="works__featured-meta">
-                <div class="works__featured-meta-item">
-                  <dt>業種</dt>
-                  <dd>飲食業</dd>
-                </div>
-                <div class="works__featured-meta-item">
-                  <dt>対応範囲</dt>
-                  <dd>SEO / デザイン / 動画制作 / CMS構築 / パララックス</dd>
-                </div>
-              </dl>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>動画制作</li>
-                <li>CMS構築</li>
-                <li>パララックス</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Works -->
-        <div class="works__gallery">
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp03.jpg" alt="綜合交通株式会社 綜合観光バス ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">綜合交通株式会社 綜合観光バス 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>CMS構築</li>
-                <li>LP制作</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp04.jpg" alt="株式会社トキワビル商会 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社トキワビル商会 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>LP制作</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp05.jpg" alt="株式会社イワキン工業 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社イワキン工業 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp06.jpg" alt="株式会社活菜舎 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社活菜舎 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp07.jpg" alt="一般社団法人飯塚青年会議所 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">一般社団法人飯塚青年会議所 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp08.jpg" alt="学校法人飯塚学園 飯塚日新館 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">学校法人飯塚学園 飯塚日新館 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp10.jpg" alt="株式会社チクホーシーリング ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社チクホーシーリング 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>動画制作</li>
-                <li>CMS構築</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp11.jpg" alt="丸野クリニック ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">丸野クリニック 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp12.jpg" alt="有限会社梅里竹芸 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">有限会社梅里竹芸 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp13.jpg" alt="株式会社エイコーエンジニアリング ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社エイコーエンジニアリング 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp14.jpg" alt="有限会社小林彫刻所 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">有限会社小林彫刻所 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp15.jpg" alt="大里酒造株式会社 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">大里酒造株式会社 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>ECサイト</li>
-                <li>Mailフォーム</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp16.jpg" alt="有限会社坂口不動産 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">有限会社坂口不動産 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp17.jpg" alt="医療法人徹滋会 北﨑医院 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">医療法人徹滋会 北﨑医院 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp18.jpg" alt="広告・美術 ホークス ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">広告・美術 ホークス 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp19.jpg" alt="鮎川産業株式会社 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">鮎川産業株式会社 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp20.jpg" alt="株式会社磯部 ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社磯部 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-image">
-              <img src="assets/images/hp21.jpg" alt="株式会社ニッツー ホームページ制作実績" width="300" height="200" loading="lazy" decoding="async">
-            </div>
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">株式会社ニッツー 様</h4>
-              <ul class="works__featured-tags">
-                <li>SEO</li>
-                <li>FLASH</li>
-                <li>デザイン</li>
-                <li>システム</li>
-                <li>CMS構築</li>
-                <li>Mailフォーム</li>
-                <li>レスポンシブ</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- その他 業種別制作実績 -->
-        <div class="section-header section-header--center works__category-header">
-          <h2 class="section-header__title">その他 業種別制作実績</h2>
-        </div>
-        <div class="works__gallery">
-          <div class="works__gallery-card">
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">公庁関係</h4>
-              <p class="works__gallery-desc">官公庁・団体</p>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">教育・福祉関係</h4>
-              <p class="works__gallery-desc">私立中・高校・保育園・介護施設</p>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">病院・医療関係</h4>
-              <p class="works__gallery-desc">調剤薬局・歯科クリニック・クリニック</p>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">不動産・建築関係</h4>
-              <p class="works__gallery-desc">不動産会社・建築会社</p>
-            </div>
-          </div>
-          <div class="works__gallery-card">
-            <div class="works__gallery-body">
-              <h4 class="works__gallery-title">その他</h4>
-              <p class="works__gallery-desc">遊技場・飲食業関係</p>
-            </div>
-          </div>
-        </div>
+      <div class="concerns__card reveal reveal-d1">
+        <p class="concerns__card-num">— 02</p>
+        <h3 class="concerns__card-title">制作会社選びに迷っている</h3>
+        <p class="concerns__card-text">見積もりの相場がわからず、どの制作会社に頼めばいいか判断がつかない。</p>
       </div>
-    </section>
-
-    <!-- ========== 中間CTA帯 ========== -->
-    <section class="mid-cta">
-      <div class="container mid-cta__inner">
-        <p class="mid-cta__text">まずはお気軽にご相談ください。無料でお見積もりいたします。</p>
-        <a href="#contact" class="btn btn--primary">無料相談はこちら</a>
+      <div class="concerns__card reveal reveal-d2">
+        <p class="concerns__card-num">— 03</p>
+        <h3 class="concerns__card-title">更新作業に手間がかかる</h3>
+        <p class="concerns__card-text">ちょっとした修正でも毎回制作会社に依頼が必要で、時間もコストもかかっている。</p>
       </div>
-    </section>
-
-    <!-- ========== SERVICE / サービス内容 ========== -->
-    <section class="service" id="service">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">SERVICE</p>
-          <h2 class="section-header__title">サービス内容</h2>
-        </div>
-        <div class="service__main-card">
-          <span class="service__main-card-label">MAIN SERVICE</span>
-          <div class="service__main-card-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="8" width="40" height="28" rx="3"/><line x1="4" y1="16" x2="44" y2="16"/><line x1="18" y1="36" x2="30" y2="42"/><line x1="30" y1="36" x2="18" y2="42"/></svg>
-          </div>
-          <h3 class="service__main-card-title">ホームページ制作・リニューアル</h3>
-          <p class="service__main-card-text">コーポレートサイト、サービスサイト、ブランドサイトなど、目的に合わせた高品質なWebサイトを制作。戦略設計からデザイン、開発、公開まで一貫対応します。</p>
-        </div>
-        <div class="service__sub-cards">
-          <div class="service__sub-card">
-            <div class="service__sub-card-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="4" width="20" height="28" rx="3"/><line x1="14" y1="26" x2="22" y2="26"/></svg>
-            </div>
-            <h4 class="service__sub-card-title">LP制作</h4>
-            <p class="service__sub-card-text">広告やキャンペーンに最適化されたランディングページを制作。CVR向上を重視した設計です。</p>
-          </div>
-          <div class="service__sub-card">
-            <div class="service__sub-card-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="14"/><path d="M18 8 L18 18 L26 18"/></svg>
-            </div>
-            <h4 class="service__sub-card-title">保守・運用サポート</h4>
-            <p class="service__sub-card-text">更新作業、セキュリティ対策、バックアップ管理など、公開後のサイト運用をサポートします。</p>
-          </div>
-          <div class="service__sub-card">
-            <div class="service__sub-card-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 28 L12 16 L20 22 L28 10 L34 14"/><circle cx="12" cy="16" r="2"/><circle cx="20" cy="22" r="2"/><circle cx="28" cy="10" r="2"/></svg>
-            </div>
-            <h4 class="service__sub-card-title">SEO・集客支援</h4>
-            <p class="service__sub-card-text">検索エンジン対策やアクセス解析で、見込み顧客の流入を最大化します。</p>
-          </div>
-        </div>
+      <div class="concerns__card reveal">
+        <p class="concerns__card-num">— 04</p>
+        <h3 class="concerns__card-title">集客につながらない</h3>
+        <p class="concerns__card-text">ホームページはあるが、アクセスが少なく問い合わせもほとんど来ない。</p>
       </div>
-    </section>
-
-    <!-- ========== COMPARISON / 他社との比較 ========== -->
-    <section class="comparison" id="comparison">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">COMPARISON</p>
-          <h2 class="section-header__title">一般的な制作会社との比較</h2>
-        </div>
-        <div class="comparison__table-wrap">
-          <table class="comparison__table">
-            <thead>
-              <tr>
-                <th class="comparison__th-label">比較項目</th>
-                <th class="comparison__th-us">当社</th>
-                <th class="comparison__th-other">一般的な制作会社</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ヒアリング・要件定義</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> 専任担当が丁寧に対応</td>
-                <td><span class="comparison__icon comparison__icon--triangle" aria-label="場合による">&#9651;</span> テンプレート対応が多い</td>
-              </tr>
-              <tr>
-                <td>デザインの自由度</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> フルオーダーメイド</td>
-                <td><span class="comparison__icon comparison__icon--triangle" aria-label="場合による">&#9651;</span> テンプレートベース</td>
-              </tr>
-              <tr>
-                <td>レスポンシブ対応</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> 全ページ標準対応</td>
-                <td><span class="comparison__icon comparison__icon--triangle" aria-label="場合による">&#9651;</span> 別途費用がかかる場合も</td>
-              </tr>
-              <tr>
-                <td>SEO対策</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> 内部SEO標準実装</td>
-                <td><span class="comparison__icon comparison__icon--cross" aria-label="非対応">&#10005;</span> オプション扱いが多い</td>
-              </tr>
-              <tr>
-                <td>公開後のサポート</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> 月次レポート＋保守</td>
-                <td><span class="comparison__icon comparison__icon--cross" aria-label="非対応">&#10005;</span> 公開後は別契約</td>
-              </tr>
-              <tr>
-                <td>料金の透明性</td>
-                <td class="comparison__check"><span class="comparison__icon comparison__icon--check" aria-label="対応">&#10003;</span> 明瞭な料金体系</td>
-                <td><span class="comparison__icon comparison__icon--triangle" aria-label="場合による">&#9651;</span> 追加費用が発生しやすい</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="concerns__card reveal reveal-d1">
+        <p class="concerns__card-num">— 05</p>
+        <h3 class="concerns__card-title">コンテンツが作れない</h3>
+        <p class="concerns__card-text">何を載せればいいかわからない。文章や写真の準備も大変で手が止まっている。</p>
       </div>
-    </section>
-
-    <!-- ========== FLOW / ご依頼から公開後までの流れ ========== -->
-    <section class="flow" id="flow">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">FLOW</p>
-          <h2 class="section-header__title">ご依頼から公開後までの流れ</h2>
-        </div>
-        <div class="flow__timeline">
-          <div class="flow__step">
-            <div class="flow__step-number">01</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">お問い合わせ・無料相談</h3>
-              <p class="flow__step-text">現状のお悩みやご要望を丁寧にヒアリングします。</p>
-            </div>
-          </div>
-          <div class="flow__step">
-            <div class="flow__step-number">02</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">ご提案・お見積もり</h3>
-              <p class="flow__step-text">最適なプランと明確なお見積もりをご提案します。</p>
-            </div>
-          </div>
-          <div class="flow__step">
-            <div class="flow__step-number">03</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">設計・デザイン</h3>
-              <p class="flow__step-text">構成設計・ワイヤーフレーム・デザインカンプをご確認いただきながら進めます。</p>
-            </div>
-          </div>
-          <div class="flow__step">
-            <div class="flow__step-number">04</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">開発・コーディング</h3>
-              <p class="flow__step-text">レスポンシブ対応・SEO内部対策を含め、確定デザインを実装します。</p>
-            </div>
-          </div>
-          <div class="flow__step">
-            <div class="flow__step-number">05</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">テスト・確認</h3>
-              <p class="flow__step-text">各種ブラウザ・デバイスでの動作確認後、公開準備を進めます。</p>
-            </div>
-          </div>
-          <div class="flow__step flow__step--highlight">
-            <div class="flow__step-number">06</div>
-            <div class="flow__step-card">
-              <h3 class="flow__step-title">公開・運用サポート</h3>
-              <p class="flow__step-text">更新作業・アクセス解析・改善提案など、公開後も継続サポートします。</p>
-            </div>
-          </div>
-        </div>
+      <div class="concerns__card reveal reveal-d2">
+        <p class="concerns__card-num">— 06</p>
+        <h3 class="concerns__card-title">公開後の運用が不安</h3>
+        <p class="concerns__card-text">作って終わりではなく、公開後のサポートやセキュリティ対策もしっかりしてほしい。</p>
       </div>
-    </section>
+    </div>
+  </div>
+  <div class="concerns__band reveal">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <p class="concerns__band-text">そのお悩み、私たちが解決します。まずはお気軽にご相談ください。</p>
+      <a href="#contact" class="btn-pop">無料相談はこちら</a>
+    </div>
+  </div>
+</section>
 
-    <!-- ========== TARGET / こんな方におすすめ ========== -->
-    <section class="target" id="target">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <p class="section-header__label">RECOMMENDED</p>
-          <h2 class="section-header__title">こんな方におすすめです</h2>
-        </div>
-        <div class="target__items">
-          <div class="target__item">
-            <div class="target__item-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="22" height="16" rx="2"/><line x1="3" y1="11" x2="25" y2="11"/><line x1="10" y1="21" x2="18" y2="24"/></svg>
-            </div>
-            <h3 class="target__item-title">初めてホームページを<br>作りたい方</h3>
-            <p class="target__item-desc">何から始めればいいか丁寧にご案内します</p>
-          </div>
-          <div class="target__item">
-            <div class="target__item-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3 L25 8 L25 20 L14 25 L3 20 L3 8 Z"/></svg>
-            </div>
-            <h3 class="target__item-title">既存サイトを<br>リニューアルしたい方</h3>
-            <p class="target__item-desc">現状分析から改善提案まで対応します</p>
-          </div>
-          <div class="target__item">
-            <div class="target__item-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="11"/><path d="M14 7 L14 14 L20 14"/></svg>
-            </div>
-            <h3 class="target__item-title">運用・保守も<br>任せたい方</h3>
-            <p class="target__item-desc">更新・保守・解析まで長期サポートします</p>
-          </div>
-          <div class="target__item">
-            <div class="target__item-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 24 L10 14 L16 18 L22 8 L26 10"/></svg>
-            </div>
-            <h3 class="target__item-title">集客・売上アップを<br>目指している方</h3>
-            <p class="target__item-desc">SEO・導線設計で成果につなげます</p>
-          </div>
-        </div>
-        <div class="target__checklist">
-          <ul class="target__checklist-list">
-            <li class="target__checklist-item">
-              <span class="target__check-icon">&#10003;</span>
-              Web制作の知識がなくても安心してお任せいただけます
-            </li>
-            <li class="target__checklist-item">
-              <span class="target__check-icon">&#10003;</span>
-              小規模サイトから大規模サイトまで柔軟に対応可能
-            </li>
-            <li class="target__checklist-item">
-              <span class="target__check-icon">&#10003;</span>
-              業種・業態を問わず幅広い実績があります
-            </li>
-            <li class="target__checklist-item">
-              <span class="target__check-icon">&#10003;</span>
-              ご予算に合わせた最適なプランをご提案いたします
-            </li>
+<!-- ========== REASONS ========== -->
+<section class="reasons" id="reasons">
+  <div class="wrap">
+    <div class="reasons__head reveal">
+      <div>
+        <span class="reasons__label">REASONS</span>
+        <h2 class="reasons__title">選ばれる<br>理由</h2>
+      </div>
+      <p class="reasons__desc">設計・デザイン・開発・運用まで、すべてワンストップで対応。複数の会社に依頼する手間も、コミュニケーションコストも、ゼロにします。</p>
+    </div>
+    <div class="reasons__main reveal">
+      <div class="reasons__main-text">
+        <span class="reasons__main-num">— 01</span>
+        <h3 class="reasons__main-title">戦略設計から制作・運用まで<br>ワンストップで対応</h3>
+        <p class="reasons__main-body">設計・デザイン・開発・運用まで一貫対応。窓口がひとつだからスムーズに進みます。</p>
+      </div>
+      <div class="reasons__main-img">IMAGE</div>
+    </div>
+    <div class="reasons__subs">
+      <div class="reasons__sub reveal">
+        <span class="reasons__sub-num">— 02</span>
+        <h3 class="reasons__sub-title">成果につながるデザイン設計</h3>
+        <p class="reasons__sub-text">ユーザーの行動を促す導線設計で、問い合わせ・売上アップにつなげます。</p>
+        <span class="reasons__sub-arrow">↗</span>
+      </div>
+      <div class="reasons__sub reveal reveal-d1">
+        <span class="reasons__sub-num">— 03</span>
+        <h3 class="reasons__sub-title">公開後も安心のサポート体制</h3>
+        <p class="reasons__sub-text">更新・セキュリティ・解析まで、公開後も長くお付き合いいただけます。</p>
+        <span class="reasons__sub-arrow">↗</span>
+      </div>
+      <div class="reasons__sub reveal reveal-d2">
+        <span class="reasons__sub-num">— 04</span>
+        <h3 class="reasons__sub-title">明確な料金と丁寧なヒアリング</h3>
+        <p class="reasons__sub-text">不明瞭な追加費用なし。ご予算に合わせた最適プランをご提案します。</p>
+        <span class="reasons__sub-arrow">↗</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WORKS ========== -->
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="works__head reveal">
+      <div class="works__head-left">
+        <span class="works__label">WORKS</span>
+        <h2 class="works__title">ホームページ<br>制作実績</h2>
+      </div>
+      <span class="works__head-right">SELECTED PROJECTS</span>
+    </div>
+    <div class="works__featured reveal">
+      <div class="works__feat">
+        <div class="works__feat-img">IMAGE</div>
+        <div class="works__feat-info">
+          <span class="works__feat-cat">CORPORATE SITE</span>
+          <h3 class="works__feat-title">村上ホーム株式会社 様</h3>
+          <dl class="works__feat-meta">
+            <div class="works__feat-meta-row"><dt>業種</dt><dd>不動産・建築</dd></div>
+            <div class="works__feat-meta-row"><dt>対応範囲</dt><dd>SEO / デザイン / システム / CMS構築 / Mailフォーム</dd></div>
+          </dl>
+          <ul class="works__tags">
+            <li class="works__tag">SEO</li><li class="works__tag">デザイン</li><li class="works__tag">システム</li><li class="works__tag">CMS構築</li><li class="works__tag">Mailフォーム</li><li class="works__tag">レスポンシブ</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <!-- ========== BOTTOM CTA ========== -->
-    <section class="bottom-cta" id="contact">
-      <div class="bottom-cta__bg-grid"></div>
-      <div class="container bottom-cta__inner">
-        <p class="bottom-cta__label">CONTACT</p>
-        <h2 class="bottom-cta__title">ひとりで悩まず、<br>まずはお気軽にご相談ください。</h2>
-        <p class="bottom-cta__text">無料相談・お見積もりは随時受け付けております。<br>お客様のビジネスに最適なWebサイトをご提案します。</p>
-        <a href="#" class="btn btn--primary btn--large">無料で相談する</a>
-        <p class="bottom-cta__note">※ ご相談・お見積もりは無料です。お気軽にどうぞ。</p>
+      <div class="works__feat works__feat--rev">
+        <div class="works__feat-img">IMAGE</div>
+        <div class="works__feat-info">
+          <span class="works__feat-cat">CORPORATE SITE</span>
+          <h3 class="works__feat-title">有限会社坂田金時堂 様</h3>
+          <dl class="works__feat-meta">
+            <div class="works__feat-meta-row"><dt>業種</dt><dd>飲食業</dd></div>
+            <div class="works__feat-meta-row"><dt>対応範囲</dt><dd>SEO / デザイン / 動画制作 / CMS構築 / パララックス</dd></div>
+          </dl>
+          <ul class="works__tags">
+            <li class="works__tag">SEO</li><li class="works__tag">デザイン</li><li class="works__tag">動画制作</li><li class="works__tag">CMS構築</li><li class="works__tag">パララックス</li><li class="works__tag">レスポンシブ</li>
+          </ul>
+        </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__logo">
-        <span class="footer__logo-icon">&#9670;</span>
-        <span class="footer__logo-text">COMPANY</span>
-      </div>
-      <nav class="footer__nav">
-        <a href="#service">サービス内容</a>
-        <a href="#works">制作実績</a>
-        <a href="#flow">ご利用の流れ</a>
-        <a href="#contact">お問い合わせ</a>
-      </nav>
-      <p class="footer__copy">&copy; 2026 COMPANY Inc. All Rights Reserved.</p>
     </div>
-  </footer>
+    <div class="works__gallery reveal">
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">綜合交通株式会社 綜合観光バス 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">デザイン</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">株式会社トキワビル商会 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">LP制作</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">株式会社イワキン工業 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">システム</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">株式会社活菜舎 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">デザイン</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">一般社団法人飯塚青年会議所 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">デザイン</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">学校法人飯塚学園 飯塚日新館 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">株式会社チクホーシーリング 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">動画制作</li><li class="works__tag">CMS構築</li></ul></div></div>
+      <div class="works__gcard"><div class="works__gcard-img">IMAGE</div><div class="works__gcard-body"><p class="works__gcard-title">丸野クリニック 様</p><ul class="works__tags" style="margin-top:8px"><li class="works__tag">SEO</li><li class="works__tag">レスポンシブ</li></ul></div></div>
+    </div>
+    <div class="works__cat-head reveal">
+      <h3 class="works__cat-title">その他 業種別制作実績</h3>
+      <span class="works__cat-line"></span>
+    </div>
+    <div class="works__cat-grid reveal">
+      <div class="works__cat-card"><h4 class="works__cat-card-title">公庁関係</h4><p class="works__cat-card-desc">官公庁・団体</p></div>
+      <div class="works__cat-card"><h4 class="works__cat-card-title">教育・福祉関係</h4><p class="works__cat-card-desc">私立中・高校・保育園・介護施設</p></div>
+      <div class="works__cat-card"><h4 class="works__cat-card-title">病院・医療関係</h4><p class="works__cat-card-desc">調剤薬局・歯科クリニック・クリニック</p></div>
+      <div class="works__cat-card"><h4 class="works__cat-card-title">不動産・建築関係</h4><p class="works__cat-card-desc">不動産会社・建築会社</p></div>
+      <div class="works__cat-card"><h4 class="works__cat-card-title">その他</h4><p class="works__cat-card-desc">遊技場・飲食業関係</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MID CTA ========== -->
+<section class="mid-cta">
+  <div class="wrap">
+    <p class="mid-cta__text">まずはお気軽にご相談ください。無料でお見積もりいたします。</p>
+    <a href="#contact" class="btn-fill">無料相談はこちら</a>
+  </div>
+</section>
+
+<!-- ========== SERVICE ========== -->
+<section class="service" id="service">
+  <div class="wrap">
+    <div class="service__head reveal">
+      <span class="service__label">SERVICE</span>
+      <h2 class="service__title">サービス内容</h2>
+    </div>
+    <div class="service__main reveal">
+      <div class="service__main-left">
+        <span class="service__main-badge">MAIN SERVICE</span>
+        <h3 class="service__main-title">ホームページ制作・リニューアル</h3>
+        <p class="service__main-text">コーポレートサイト、サービスサイト、ブランドサイトなど、目的に合わせた高品質なWebサイトを制作。戦略設計からデザイン、開発、公開まで一貫対応します。</p>
+        <a href="#contact" class="btn-fill" style="align-self:flex-start">相談してみる</a>
+      </div>
+      <div class="service__main-right">
+        <ul class="service__main-list">
+          <li>コーポレートサイト制作</li>
+          <li>サービスサイト・ブランドサイト</li>
+          <li>既存サイトのリニューアル</li>
+          <li>スマートフォン対応（レスポンシブ）</li>
+          <li>CMS導入・ワードプレス構築</li>
+          <li>SEO内部対策標準実装</li>
+        </ul>
+      </div>
+    </div>
+    <div class="service__subs">
+      <div class="service__sub reveal">
+        <span class="service__sub-num">— 02</span>
+        <div class="service__sub-icon">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="4" width="20" height="28" rx="3"/><line x1="14" y1="26" x2="22" y2="26"/></svg>
+        </div>
+        <h4 class="service__sub-title">LP制作</h4>
+        <p class="service__sub-text">広告やキャンペーンに最適化されたランディングページを制作。CVR向上を重視した設計です。</p>
+      </div>
+      <div class="service__sub reveal reveal-d1">
+        <span class="service__sub-num">— 03</span>
+        <div class="service__sub-icon">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="14"/><path d="M18 8 L18 18 L26 18"/></svg>
+        </div>
+        <h4 class="service__sub-title">保守・運用サポート</h4>
+        <p class="service__sub-text">更新作業、セキュリティ対策、バックアップ管理など、公開後のサイト運用をサポートします。</p>
+      </div>
+      <div class="service__sub reveal reveal-d2">
+        <span class="service__sub-num">— 04</span>
+        <div class="service__sub-icon">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 28 L12 16 L20 22 L28 10 L34 14"/><circle cx="12" cy="16" r="2"/><circle cx="20" cy="22" r="2"/><circle cx="28" cy="10" r="2"/></svg>
+        </div>
+        <h4 class="service__sub-title">SEO・集客支援</h4>
+        <p class="service__sub-text">検索エンジン対策やアクセス解析で、見込み顧客の流入を最大化します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARISON ========== -->
+<section class="comparison" id="comparison">
+  <div class="wrap">
+    <div class="comparison__head reveal">
+      <span class="comparison__label">COMPARISON</span>
+      <h2 class="comparison__title">一般的な制作会社との比較</h2>
+    </div>
+    <div class="comparison__wrap reveal">
+      <table class="comparison__table">
+        <thead>
+          <tr>
+            <th style="width:200px">比較項目</th>
+            <th>当社</th>
+            <th>一般的な制作会社</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ヒアリング・要件定義</td><td><span class="chk">✓</span>専任担当が丁寧に対応</td><td><span class="tri">△</span>テンプレート対応が多い</td></tr>
+          <tr><td>デザインの自由度</td><td><span class="chk">✓</span>フルオーダーメイド</td><td><span class="tri">△</span>テンプレートベース</td></tr>
+          <tr><td>レスポンシブ対応</td><td><span class="chk">✓</span>全ページ標準対応</td><td><span class="tri">△</span>別途費用がかかる場合も</td></tr>
+          <tr><td>SEO対策</td><td><span class="chk">✓</span>内部SEO標準実装</td><td><span class="crs">✗</span>オプション扱いが多い</td></tr>
+          <tr><td>公開後のサポート</td><td><span class="chk">✓</span>月次レポート＋保守</td><td><span class="crs">✗</span>公開後は別契約</td></tr>
+          <tr><td>料金の透明性</td><td><span class="chk">✓</span>明瞭な料金体系</td><td><span class="tri">△</span>追加費用が発生しやすい</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FLOW ========== -->
+<section class="flow" id="flow">
+  <div class="wrap">
+    <div class="flow__head reveal">
+      <span class="flow__label">FLOW</span>
+      <h2 class="flow__title">ご依頼から公開後までの流れ</h2>
+    </div>
+    <div class="flow__steps">
+      <div class="flow__step reveal">
+        <div class="flow__step-num">01</div>
+        <h3 class="flow__step-title">お問い合わせ・無料相談</h3>
+        <p class="flow__step-text">現状のお悩みやご要望を丁寧にヒアリングします。</p>
+      </div>
+      <div class="flow__step reveal reveal-d1">
+        <div class="flow__step-num">02</div>
+        <h3 class="flow__step-title">ご提案・お見積もり</h3>
+        <p class="flow__step-text">最適なプランと明確なお見積もりをご提案します。</p>
+      </div>
+      <div class="flow__step reveal reveal-d2">
+        <div class="flow__step-num">03</div>
+        <h3 class="flow__step-title">設計・デザイン</h3>
+        <p class="flow__step-text">構成設計・ワイヤーフレーム・デザインカンプをご確認いただきながら進めます。</p>
+      </div>
+      <div class="flow__step reveal reveal-d3">
+        <div class="flow__step-num">04</div>
+        <h3 class="flow__step-title">開発・コーディング</h3>
+        <p class="flow__step-text">レスポンシブ対応・SEO内部対策を含め、確定デザインを実装します。</p>
+      </div>
+      <div class="flow__step reveal reveal-d4">
+        <div class="flow__step-num">05</div>
+        <h3 class="flow__step-title">テスト・確認</h3>
+        <p class="flow__step-text">各種ブラウザ・デバイスでの動作確認後、公開準備を進めます。</p>
+      </div>
+      <div class="flow__step flow__step--last reveal reveal-d4">
+        <div class="flow__step-num">06</div>
+        <h3 class="flow__step-title">公開・運用サポート</h3>
+        <p class="flow__step-text">更新作業・アクセス解析・改善提案など、公開後も継続サポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TARGET ========== -->
+<section class="target" id="target">
+  <div class="wrap">
+    <div class="target__head reveal">
+      <span class="target__label">RECOMMENDED</span>
+      <h2 class="target__title">こんな方に<br>おすすめです</h2>
+    </div>
+    <div class="target__items">
+      <div class="target__item reveal">
+        <span class="target__item-num">— 01</span>
+        <h3 class="target__item-title">初めてホームページを作りたい方</h3>
+        <p class="target__item-desc">何から始めればいいか丁寧にご案内します</p>
+      </div>
+      <div class="target__item reveal reveal-d1">
+        <span class="target__item-num">— 02</span>
+        <h3 class="target__item-title">既存サイトをリニューアルしたい方</h3>
+        <p class="target__item-desc">現状分析から改善提案まで対応します</p>
+      </div>
+      <div class="target__item reveal reveal-d2">
+        <span class="target__item-num">— 03</span>
+        <h3 class="target__item-title">運用・保守も任せたい方</h3>
+        <p class="target__item-desc">更新・保守・解析まで長期サポートします</p>
+      </div>
+      <div class="target__item reveal reveal-d3">
+        <span class="target__item-num">— 04</span>
+        <h3 class="target__item-title">集客・売上アップを目指している方</h3>
+        <p class="target__item-desc">SEO・導線設計で成果につなげます</p>
+      </div>
+    </div>
+    <div class="target__check reveal">
+      <div class="target__check-item">
+        <span class="target__check-mark">✓</span>
+        <span>Web制作の知識がなくても安心してお任せいただけます</span>
+      </div>
+      <div class="target__check-item">
+        <span class="target__check-mark">✓</span>
+        <span>小規模サイトから大規模サイトまで柔軟に対応可能</span>
+      </div>
+      <div class="target__check-item">
+        <span class="target__check-mark">✓</span>
+        <span>業種・業態を問わず幅広い実績があります</span>
+      </div>
+      <div class="target__check-item">
+        <span class="target__check-mark">✓</span>
+        <span>ご予算に合わせた最適なプランをご提案いたします</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BOTTOM CTA ========== -->
+<section class="bottom-cta" id="contact">
+  <div class="bottom-cta__left reveal">
+    <span class="bottom-cta__label">CONTACT</span>
+    <h2 class="bottom-cta__title">ひとりで悩まず、<br>まずは<br>ご相談を。</h2>
+    <p class="bottom-cta__text">無料相談・お見積もりは随時受け付けております。お客様のビジネスに最適なWebサイトをご提案します。</p>
+    <a href="#" class="btn-pop" style="align-self:flex-start">無料で相談する</a>
+    <p class="bottom-cta__note">※ ご相談・お見積もりは無料です。お気軽にどうぞ。</p>
+  </div>
+  <div class="bottom-cta__right reveal reveal-d2">
+    <div class="bottom-cta__right-content">
+      <div class="bottom-cta__point">
+        <div class="bottom-cta__point-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <p class="bottom-cta__point-title">最短3営業日以内に返信</p>
+          <p class="bottom-cta__point-text">お問い合わせ後、迅速にご連絡いたします</p>
+        </div>
+      </div>
+      <div class="bottom-cta__point">
+        <div class="bottom-cta__point-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <p class="bottom-cta__point-title">相談・見積もりは完全無料</p>
+          <p class="bottom-cta__point-text">費用が発生するのはご契約後のみです</p>
+        </div>
+      </div>
+      <div class="bottom-cta__point">
+        <div class="bottom-cta__point-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <p class="bottom-cta__point-title">業種・規模問わず対応</p>
+          <p class="bottom-cta__point-text">中小企業から大企業まで実績多数あります</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__top-inner">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <span class="footer__brand-logo-dot">◆</span>COMPANY
+        </div>
+        <p class="footer__brand-desc">ホームページ制作・リニューアル・運用保守まで、Webに関するあらゆる課題をワンストップでサポートします。</p>
+      </div>
+      <div class="footer__col">
+        <span class="footer__col-label">MENU</span>
+        <div class="footer__col-links">
+          <a href="#service">サービス内容</a>
+          <a href="#works">制作実績</a>
+          <a href="#flow">ご利用の流れ</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <span class="footer__col-label">SERVICE</span>
+        <div class="footer__col-links">
+          <a href="#service">ホームページ制作・リニューアル</a>
+          <a href="#service">LP制作</a>
+          <a href="#service">保守・運用サポート</a>
+          <a href="#service">SEO・集客支援</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy">&copy; 2026 COMPANY Inc. All Rights Reserved.</p>
+    <a href="#" class="footer__policy">プライバシーポリシー</a>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
 </body>
