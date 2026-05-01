@@ -1,0 +1,120 @@
+---
+description: docs/lp-projects配下はエージェントが作成・更新する。変更理由はdecisions.mdに記録。
+globs: ["docs/lp-projects/**", "src/**", "dist/**"]
+alwaysApply: true
+---
+
+## ディレクトリ構成
+
+```
+docs/
+└── lp-projects/              # LPプロジェクト
+    └── {project-name}/
+        ├── brief.md              # 依頼内容・ターゲット情報
+        ├── research.md           # リサーチ結果
+        ├── wireframe.md          # セクション構成・ワイヤーフレーム
+        ├── copy.md               # コピーライティング原稿
+        ├── decisions.md          # 設計判断記録
+        └── review.md             # レビュー記録
+
+src/
+└── {project-name}/           # LP実装ファイル
+    ├── index.html                # メインHTML
+    ├── css/
+    │   ├── style.css             # メインスタイル
+    │   ├── responsive.css        # レスポンシブ対応
+    │   └── animations.css        # アニメーション定義
+    ├── js/
+    │   └── main.js               # メインスクリプト
+    └── assets/
+        ├── images/               # 画像素材
+        ├── icons/                # アイコン
+        └── fonts/                # Webフォント
+
+dist/
+└── {project-name}/           # 公開用ファイル（ビルド後）
+
+docs/
+├── templates/                # 再利用テンプレート
+│   ├── sections/                 # セクションテンプレート
+│   └── components/               # 再利用パーツ
+└── assets/                   # 共通素材
+    ├── logos/
+    ├── icons/
+    └── images/
+```
+
+## 所有権ルール
+
+- `docs/lp-projects/` はAIが作成・更新する領域
+- `src/` はAIがLP実装を作成する領域
+- 変更理由は `decisions.md` に必ず残す
+- `dist/` は公開用ファイルの出力先
+
+## ファイル命名規則
+
+- プロジェクト名: `{イベント名}` または `{YYYYMMDD}-{イベント名}`
+- 例: `tech-conference-2024`, `20240315-ai-seminar`
+
+## decisions.md のフォーマット
+
+設計判断を記録するファイル。各エージェントが重要な判断時に追記する。
+
+```markdown
+# 設計判断記録
+
+## YYYY-MM-DD: 判断タイトル
+
+### 判断者
+- エージェント: Manager / Researcher / Structurer / Writer / Builder / Reviewer
+
+### 背景
+- （判断が必要になった背景）
+
+### 選択肢
+1. 案A: 
+2. 案B: 
+
+### 決定
+- 採用案: 
+- 理由: 
+
+---
+
+（以下、追記していく）
+```
+
+## レスポンシブブレークポイント
+
+プロジェクト全体で統一するブレークポイント：
+
+```css
+/* Mobile First */
+/* Base: ~767px (モバイル) */
+
+/* Tablet: 768px~ */
+@media (min-width: 768px) { }
+
+/* Desktop: 1024px~ */
+@media (min-width: 1024px) { }
+
+/* Large Desktop: 1280px~ */
+@media (min-width: 1280px) { }
+```
+
+## アイコン・デザインルール
+
+- **絵文字は絶対に使わない**
+- **アイコンは線画アイコン（ラインドローイング）を使用する**
+  - シンプルな線画・アウトライン形式のアイコン
+  - PNG/SVG で `assets/icons/` に配置
+
+## アニメーションライブラリ選択基準
+
+| ライブラリ | 用途 | 導入方法 |
+|-----------|------|---------|
+| CSS animations | シンプルな動き、軽量 | 標準CSS |
+| AOS.js | スクロール連動、導入簡単 | CDN or npm |
+| GSAP | 複雑なアニメーション、高度な制御 | CDN or npm |
+
+案件ごとに `decisions.md` に選択理由を記録する。

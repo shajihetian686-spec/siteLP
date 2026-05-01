@@ -1,0 +1,503 @@
+---
+description: LP実装を担当。HTML/CSS/JSで洗練されたデザイン、アニメーション、レスポンシブ対応を実装する。
+globs: ["src/**", "dist/**"]
+alwaysApply: false
+---
+
+## 役割
+
+1. **LP実装**: コピー（copy.md）を元にHTML/CSS/JSでLPを実装
+2. **アニメーション**: スクロールアニメーション、マイクロインタラクションを実装
+3. **レスポンシブ対応**: モバイルファーストで全デバイス対応
+4. **公開準備**: レビューOK後、公開用ファイルを出力
+
+## ファイル構成
+
+```
+src/{project-name}/
+├── index.html              # メインHTML
+├── css/
+│   ├── style.css           # メインスタイル（モバイルファースト）
+│   ├── responsive.css      # タブレット・デスクトップ対応
+│   └── animations.css      # アニメーション定義
+├── js/
+│   └── main.js             # JavaScript（インタラクション）
+└── assets/
+    ├── images/             # 画像
+    ├── icons/              # アイコン
+    └── fonts/              # Webフォント
+```
+
+## デザイン原則
+
+### 洗練されたモダンUI
+
+```css
+/* デザイントークン */
+:root {
+  /* カラー */
+  --color-primary: #2563EB;      /* メインカラー */
+  --color-primary-dark: #1D4ED8;
+  --color-secondary: #7C3AED;    /* アクセント */
+  --color-background: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
+  
+  /* タイポグラフィ */
+  --font-sans: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* スペーシング */
+  --spacing-xs: 0.25rem;      /* 4px */
+  --spacing-sm: 0.5rem;       /* 8px */
+  --spacing-md: 1rem;         /* 16px */
+  --spacing-lg: 1.5rem;       /* 24px */
+  --spacing-xl: 2rem;         /* 32px */
+  --spacing-2xl: 3rem;        /* 48px */
+  --spacing-3xl: 4rem;        /* 64px */
+  
+  /* 角丸 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  
+  /* シャドウ */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+  
+  /* トランジション */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+```
+
+### レイアウト原則
+
+- **余白を活かす**: 情報過多を避け、読みやすさを重視
+- **視線誘導**: Z型/F型パターンを意識
+- **コントラスト**: CTAは背景と明確に区別
+- **一貫性**: 要素間のスペーシングを統一
+
+## レスポンシブ実装
+
+### モバイルファースト設計
+
+```css
+/* Base: Mobile (~767px) */
+.container {
+  width: 100%;
+  padding: 0 var(--spacing-md);
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Tablet (768px~) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+}
+
+/* Desktop (1024px~) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Large Desktop (1280px~) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+```
+
+### グリッドシステム
+
+```css
+/* Flexbox グリッド */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.grid-item {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-item--half {
+    flex: 1 1 calc(50% - var(--spacing-lg));
+  }
+  
+  .grid-item--third {
+    flex: 1 1 calc(33.333% - var(--spacing-lg));
+  }
+}
+```
+
+### タッチ操作対応
+
+```css
+/* タップ領域の確保 */
+.btn, .link {
+  min-height: 44px;
+  min-width: 44px;
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+/* ホバー効果（タッチデバイスでは無効化） */
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+```
+
+## アニメーション実装
+
+### CSS Animations（軽量）
+
+```css
+/* フェードイン */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* スライドアップ */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スケールイン */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 適用 */
+.animate-fade-in {
+  animation: fadeIn var(--transition-base) ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-slow) ease forwards;
+}
+```
+
+### AOS.js（スクロール連動）
+
+```html
+<!-- CDN読み込み -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- 初期化 -->
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 50
+  });
+</script>
+
+<!-- 使用例 -->
+<div data-aos="fade-up">フェードアップ</div>
+<div data-aos="fade-up" data-aos-delay="100">遅延付き</div>
+<div data-aos="zoom-in">ズームイン</div>
+```
+
+### GSAP（高度なアニメーション）
+
+```html
+<!-- CDN読み込み -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // スクロール連動アニメーション
+  gsap.from('.hero-title', {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top 80%'
+    }
+  });
+  
+  // スタガーアニメーション
+  gsap.from('.benefit-card', {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: '.benefits',
+      start: 'top 70%'
+    }
+  });
+</script>
+```
+
+### Intersection Observer（軽量な代替）
+
+```javascript
+// スクロール検知でクラス付与
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+```
+
+## CTAボタン実装
+
+```css
+/* プライマリCTA */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  
+  padding: var(--spacing-md) var(--spacing-xl);
+  min-height: 56px;
+  
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-decoration: none;
+  
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-cta:active {
+  transform: translateY(-1px);
+}
+
+/* パルスアニメーション（注目を引く） */
+.btn-cta--pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+}
+```
+
+## 固定CTA（モバイル用）
+
+```css
+.fixed-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  padding: var(--spacing-md);
+  background: white;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  
+  z-index: 100;
+  
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .fixed-cta {
+    display: block;
+  }
+  
+  /* フッターとの重なり防止 */
+  body {
+    padding-bottom: 80px;
+  }
+}
+```
+
+## セクションテンプレート
+
+### ファーストビュー
+
+```html
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <p class="hero__badge" data-aos="fade-down">オンラインセミナー</p>
+      <h1 class="hero__title" data-aos="fade-up">
+        ヘッドラインが<br>ここに入ります
+      </h1>
+      <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="100">
+        サブヘッドラインの説明文がここに入ります
+      </p>
+      <div class="hero__meta" data-aos="fade-up" data-aos-delay="200">
+        <span class="hero__date">📅 2024年3月15日(金) 14:00-16:00</span>
+        <span class="hero__format">💻 オンライン開催</span>
+      </div>
+      <a href="#entry" class="btn-cta btn-cta--pulse" data-aos="zoom-in" data-aos-delay="300">
+        今すぐ申し込む（無料）
+      </a>
+    </div>
+  </div>
+</section>
+```
+
+### ベネフィットカード
+
+```html
+<section class="benefits" id="benefits">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">本セミナーで得られること</h2>
+    <div class="grid">
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="benefit-card__icon">🎯</div>
+        <h3 class="benefit-card__title">ベネフィット1</h3>
+        <p class="benefit-card__text">説明文がここに入ります</p>
+      </div>
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="benefit-card__icon">💡</div>
+        <h3 class="benefit-card__title">ベネフィット2</h3>
+        <p class="benefit-card__text">説明文がここに入ります</p>
+      </div>
+      <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="benefit-card__icon">🚀</div>
+        <h3 class="benefit-card__title">ベネフィット3</h3>
+        <p class="benefit-card__text">説明文がここに入ります</p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+## パフォーマンス最適化
+
+### 画像最適化
+```html
+<!-- レスポンシブ画像 -->
+<picture>
+  <source media="(min-width: 1024px)" srcset="image-large.webp">
+  <source media="(min-width: 768px)" srcset="image-medium.webp">
+  <img src="image-small.webp" alt="説明" loading="lazy">
+</picture>
+```
+
+### フォント最適化
+```html
+<!-- Google Fonts preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- font-display: swap で表示ブロック回避 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+```
+
+## 実装完了報告
+
+```
+## LP実装完了報告
+
+### 作成ファイル
+- src/{project-name}/index.html
+- src/{project-name}/css/style.css
+- src/{project-name}/css/responsive.css
+- src/{project-name}/css/animations.css
+- src/{project-name}/js/main.js
+
+### 実装内容
+- セクション数: ○
+- アニメーション: CSS / AOS / GSAP
+- レスポンシブ: ○対応完了
+
+### デザイン
+- カラースキーム: 
+- フォント: 
+
+### 確認ポイント
+- [ ] 全セクションがcopy.mdに対応している
+- [ ] モバイル表示が適切
+- [ ] タブレット表示が適切
+- [ ] デスクトップ表示が適切
+- [ ] アニメーションが適切に動作
+- [ ] CTAが目立つ
+- [ ] 読み込み速度が許容範囲
+
+### ブラウザ確認
+- [ ] Chrome
+- [ ] Safari
+- [ ] Firefox
+- [ ] Edge
+```
+
+## 禁止事項
+
+- copy.md にない内容の追加
+- コピーの書き換え（Writerの担当）
+- レビュー前の公開（Reviewerの承認が必要）
+- 過度に重いアニメーション
+- アクセシビリティを損なう実装
