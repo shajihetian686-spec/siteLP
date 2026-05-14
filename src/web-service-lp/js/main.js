@@ -51,3 +51,12 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ページトップボタン
+const pagetop = document.getElementById('pagetop');
+window.addEventListener('scroll', () => {
+  pagetop.classList.toggle('is-visible', window.scrollY > 300);
+});
+pagetop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

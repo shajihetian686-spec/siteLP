@@ -234,8 +234,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 .hero__h1 em {
   font-style:normal;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--black);
+  color: var(--pop);
 }
 .hero__desc {
   font-size: .9375rem; line-height:2;
@@ -1054,6 +1053,27 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   transition:color .2s;
 }
 .footer__policy:hover { color:rgba(255,255,255,.5); }
+
+/* ============================================================
+   PAGE TOP
+============================================================ */
+.pagetop {
+  position:fixed; right:28px; bottom:28px; z-index:90;
+  width:46px; height:46px;
+  background:var(--black); color:var(--white);
+  border-radius:4px;
+  font-size:1rem; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(10px);
+  transition:opacity .3s var(--ease), transform .3s var(--ease), background .2s;
+  pointer-events:none;
+  cursor:pointer;
+}
+.pagetop.is-visible {
+  opacity:1; transform:translateY(0);
+  pointer-events:auto;
+}
+.pagetop:hover { background:var(--gray-dark); }
 
 /* ============================================================
    SCROLL ANIMATIONS
