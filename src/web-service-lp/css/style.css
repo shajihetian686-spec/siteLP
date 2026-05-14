@@ -33,7 +33,7 @@ body {
   font-family: var(--font-ja);
   background: var(--bg);
   color: var(--black);
-  line-height: 1.8;
+  line-height: 1.9;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -63,12 +63,9 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   justify-content:space-between; max-width:1200px; margin:0 auto; padding:0 40px;
 }
 .header__logo {
-  font-family: var(--font-disp);
-  font-size: 1.125rem; font-weight:800;
-  letter-spacing: .06em; color: var(--black);
-  display:flex; align-items:center; gap:6px;
+  display:flex; align-items:center;
 }
-.header__logo-dot { color: var(--pop); font-size:1.5rem; line-height:1; }
+.header__logo-img { height: 36px; width: auto; }
 .header__nav { display:flex; gap:40px; align-items:center; }
 .header__nav-link {
   font-family: var(--font-mono);
@@ -476,18 +473,6 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
   letter-spacing:.1em; color:var(--gray-light);
   position:relative; overflow:hidden;
 }
-.reasons__main-img::before {
-  content:'';
-  position:absolute; inset:0;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 24px,
-      rgba(0,0,0,.03) 24px,
-      rgba(0,0,0,.03) 25px
-    );
-}
 
 /* 02〜04 サブカード */
 .reasons__subs {
@@ -496,6 +481,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 .reasons__sub {
   background: var(--white);
   border:1px solid var(--border);
+  border-radius: 6px;
   padding: 44px 36px;
   position:relative; overflow:hidden;
   transition: background .25s;
@@ -782,6 +768,7 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 .service__sub {
   background:var(--white); border:1px solid var(--border);
+  border-radius: 6px;
   padding:44px 36px; transition:background .25s;
   position:relative; overflow:hidden;
 }
@@ -1021,13 +1008,10 @@ button { border:none; background:none; cursor:pointer; font-family:inherit; }
 }
 .footer__brand {}
 .footer__brand-logo {
-  font-family: var(--font-disp);
-  font-size: 1.25rem; font-weight:800;
-  letter-spacing:.06em; color:var(--white);
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center;
   margin-bottom:20px;
 }
-.footer__brand-logo-dot { color:var(--pop); }
+.footer__logo-img { height: 40px; width: auto; filter: brightness(0) invert(1); }
 .footer__brand-desc {
   font-size:.8125rem; line-height:1.9;
   color:rgba(255,255,255,.35);
